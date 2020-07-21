@@ -1,0 +1,318 @@
+:root {
+  --main: #6891ff;
+  --main-hover: #364b80;
+}
+
+* {
+  margin: 0;
+  color: #707070;
+}
+* h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #101010;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-hover);
+}
+body {
+  font-family: "Almarai", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.els {
+  position: relative;
+  width: 60%;
+  padding: 0 20%;
+}
+.hidden {
+  visibility: hidden;
+}
+/* navbar */
+
+nav {
+  margin: 40px 0;
+  background-color: #ffffffde;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+}
+.links {
+  padding: 0 22px;
+}
+
+.links a {
+  padding: 6px 9px;
+  margin: 0 3px;
+  color: #808080;
+  border-radius: 9px;
+}
+#active-page {
+  color: white;
+  background-color: var(--main);
+}
+.links a:hover {
+  color: white;
+  background-color: var(--main);
+}
+.navbar div {
+  display: flex;
+  align-items: center;
+}
+.navbar h2 a {
+  font-size: 46px;
+  color: var(--main);
+  font-family: "Cairo", sans-serif;
+}
+.navbar h2 a:hover {
+  color: var(--main-hover);
+}
+
+.lang a {
+  padding: 6px;
+  background-color: var(--main);
+  color: #ffffff;
+  border-radius: 3px;
+}
+.lang a:hover {
+  padding: 6px;
+  background-color: var(--main-hover);
+  color: #ffffff;
+}
+/* navbar end */
+
+/* description  */
+.desc {
+  padding: 30px 8px;
+}
+.desc p {
+  line-height: 38px;
+  padding: 16px 0;
+}
+/* description end*/
+
+.services {
+  margin: 90px 0;
+  padding: 40px;
+  border: var(--main) 1px solid;
+}
+.services h2 {
+  margin: 8px 0;
+}
+.servs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.serv li {
+  font-size: 19px;
+  font-weight: bold;
+}
+.serv-item {
+  display: flex;
+  margin: 16px 0;
+}
+
+.serv p {
+  color: var(--main);
+  margin: 8px 0;
+  font-size: 20px;
+}
+.serv-item li {
+  width: 300px;
+}
+.btn-more {
+  color: #ffffff;
+  display: inline-block;
+  background-color: var(--main);
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* slider */
+
+.mySlides {
+  display: none;
+  width: 100%;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin: 70px auto;
+}
+
+/* Caption text */
+.text {
+  animation: slideIn 0.2s ease-in-out;
+  color: var(--main);
+  font-size: 19px;
+  font-weight: bolder;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 80%;
+  width: 45%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.815);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* slider end */
+
+/* projects */
+.projects {
+  margin: 120px 0;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+.card {
+  width: 360px;
+  height: 240px;
+  margin: 0 14px;
+  background-color: var(--main);
+}
+
+.card img {
+  width: 360px;
+  height: 140px;
+}
+
+.card h3,
+.card p {
+  margin: 8px 16px;
+  color: #ffffff;
+}
+
+.btn-all {
+  color: #ffffff;
+  display: block;
+  background-color: var(--main);
+  padding: 6px 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 120px;
+  text-align: center;
+  margin: 0 auto;
+}
+/* projects end*/
+
+/* footer */
+
+footer {
+  display: block;
+  height: auto;
+  width: 60%;
+  padding: 20px 20%;
+  background-color: #444444;
+  color: #ffffff;
+}
+.privacy {
+  color: #101010;
+  text-align: center;
+  padding: 2px 0;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 1700px) {
+  .servs {
+    flex-direction: column;
+  }
+  .card {
+    width: 270px;
+    height: 195px;
+    margin: 0 8px;
+  }
+
+  .card img {
+    width: 270px;
+    height: 108px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
