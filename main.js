@@ -1,33 +1,19 @@
-// carousel
-// const gap = 16;
+// if (window.innerWidth < 460) {
+//   document.getElementById(
+//     "sc"
+//   ).innerHTML = `                <div class="mySlides fade">
+//   <img src="./static/m-front-fa.png" style="width:100%">
+// </div>
 
-// const carousel = document.getElementById("carousel"),
-//   content = document.getElementById("content"),
-//   next = document.getElementById("next"),
-//   prev = document.getElementById("prev");
+// <div class="mySlides fade">
+//   <img src="./static/m-back-fa.png" style="width:100%">
+// </div>
 
-// next.addEventListener("click", (e) => {
-//   carousel.scrollBy(width1 + gap, 0);
-//   if (carousel.scrollWidth !== 0) {
-//     prev.style.display = "flex";
-//   }
-//   if (content.scrollWidth - width1 - gap <= carousel.scrollLeft + width1) {
-//     next.style.display = "none";
-//   }
-// });
-// prev.addEventListener("click", (e) => {
-//   carousel.scrollBy(-(width1 + gap), 0);
-//   if (carousel.scrollLeft - width1 - gap <= 0) {
-//     prev.style.display = "none";
-//   }
-//   if (!content.scrollWidth - width1 - gap <= carousel.scrollLeft + width1) {
-//     next.style.display = "flex";
-//   }
-// });
-
-// let width1 = carousel.offsetWidth;
-// window.addEventListener("resize", (e) => (width1 = carousel.offsetWidth));
-
+// <div class="mySlides fade">
+//   <img src="./static/m-ui-fa.png" style="width:100%">
+// </div>
+// `;
+// }
 // slider
 var slideIndex = 0;
 showSlides();
@@ -50,3 +36,34 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 3200); // Change image every 2 seconds
 }
+
+// navbar s
+
+window.onscroll = function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("mon").style.height = "6vh";
+    document.getElementById("logo").style.fontSize = "38px";
+  } else {
+    document.getElementById("mon").style.height = "10vh";
+    document.getElementById("logo").style.fontSize = "48px";
+  }
+};
+
+function mobileNav(e) {
+  const ham = document.getElementById("ham");
+  ham.classList.toggle("fa-bars");
+  ham.classList.toggle("fa-close");
+  if (e == "fa") {
+    document.getElementById("links").classList.toggle("m-links-show");
+  } else if (e == "en") {
+    document.getElementById("links").classList.toggle("m-links-show-en");
+  }
+}
+function closeNav() {
+  document
+    .getElementById("ham")
+    .classList.replace("fa-window-close", "fa-bars");
+  document.getElementById("mobileOn").style.right = "-100px";
+}
+
+// navbar end
